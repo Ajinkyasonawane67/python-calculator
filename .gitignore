@@ -1,0 +1,14 @@
+# Python virtual environment
+calculator_env/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables and secrets
+.env
+
+# VS Code settings
+.vscode/

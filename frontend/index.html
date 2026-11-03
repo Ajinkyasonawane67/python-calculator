@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ajinkya's Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator-container">
+
+        <h1>Ajinkya's Calculator</h1>
+
+        <!-- First number -->
+        <div class="input-group">
+            <label for="number1">First Number:</label>
+
+            <input
+                type="number"
+                id="number1"
+                placeholder="Enter first number"
+                step="any"
+            >
+        </div>
+
+        <!-- Second number -->
+        <div class="input-group">
+            <label for="number2">Second Number:</label>
+
+            <input
+                type="number"
+                id="number2"
+                placeholder="Enter second number"
+                step="any"
+            >
+        </div>
+
+        <!-- Numeric keypad -->
+        <h3 class="keypad-heading">Number Pad</h3>
+
+        <div class="keypad">
+
+            <button type="button" onclick="enterDigit('7')">7</button>
+            <button type="button" onclick="enterDigit('8')">8</button>
+            <button type="button" onclick="enterDigit('9')">9</button>
+
+            <button type="button"
+                    class="operation-key"
+                    onclick="selectOperation('divide')">÷</button>
+
+
+            <button type="button" onclick="enterDigit('4')">4</button>
+            <button type="button" onclick="enterDigit('5')">5</button>
+            <button type="button" onclick="enterDigit('6')">6</button>
+
+            <button type="button"
+                    class="operation-key"
+                    onclick="selectOperation('multiply')">×</button>
+
+
+            <button type="button" onclick="enterDigit('1')">1</button>
+            <button type="button" onclick="enterDigit('2')">2</button>
+            <button type="button" onclick="enterDigit('3')">3</button>
+
+            <button type="button"
+                    class="operation-key"
+                    onclick="selectOperation('subtract')">−</button>
+
+
+            <button type="button" onclick="enterDigit('0')">0</button>
+            <button type="button" onclick="enterDecimal()">.</button>
+
+            <button type="button"
+                    class="backspace-key"
+                    onclick="backspace()">⌫</button>
+
+            <button type="button"
+                    class="operation-key"
+                    onclick="selectOperation('add')">+</button>
+
+        </div>
+
+        <!-- Calculation buttons -->
+        <div class="action-buttons">
+
+            <button
+                type="button"
+                class="equals-btn"
+                onclick="calculateSelectedOperation()">
+                =
+            </button>
+
+            <button
+                type="button"
+                class="clear-btn"
+                onclick="clearCalculator()">
+                Clear
+            </button>
+
+        </div>
+
+        <!-- Existing direct calculation buttons -->
+        <h3>Quick Calculation</h3>
+
+        <div class="quick-buttons">
+
+            <button type="button" onclick="calculate('add')">
+                Add
+            </button>
+
+            <button type="button" onclick="calculate('subtract')">
+                Subtract
+            </button>
+
+            <button type="button" onclick="calculate('multiply')">
+                Multiply
+            </button>
+
+            <button type="button" onclick="calculate('divide')">
+                Divide
+            </button>
+
+        </div>
+
+        <!-- Result -->
+        <h3>
+            Result:
+            <span id="result">---</span>
+        </h3>
+
+        <!-- Calculation history -->
+        <h3>Calculation History</h3>
+
+        <ul id="history"></ul>
+
+        <button
+            type="button"
+            class="clear-history-btn"
+            onclick="clearHistory()">
+            Clear History
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

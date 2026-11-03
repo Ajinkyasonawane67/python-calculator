@@ -1,0 +1,232 @@
+/* Main page styling */
+body {
+    background-color: #e9edf2;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+/* Main calculator container */
+.calculator-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Main heading */
+h1 {
+    color: #1e3a8a;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Section headings */
+h3 {
+    color: #166534;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Input field groups */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+/* Input labels */
+label {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #333333;
+}
+
+/* Number input fields */
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #b8c2cc;
+    border-radius: 7px;
+    font-size: 18px;
+    outline: none;
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* Number pad layout */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* General button styling */
+button {
+    padding: 13px 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Click effect */
+button:active {
+    transform: scale(0.96);
+}
+
+/* Number pad buttons */
+.keypad button {
+    min-height: 50px;
+    font-size: 20px;
+}
+
+/* Operation buttons */
+.operation-key {
+    background-color: #f59e0b;
+    color: #222222;
+}
+
+.operation-key:hover {
+    background-color: #d97706;
+}
+
+/* Backspace button */
+.backspace-key {
+    background-color: #64748b;
+}
+
+.backspace-key:hover {
+    background-color: #475569;
+}
+
+/* Equals and clear action buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.action-buttons button {
+    flex: 1;
+    min-height: 48px;
+}
+
+/* Equals button */
+.equals-btn {
+    background-color: #16a34a;
+    font-size: 22px;
+}
+
+.equals-btn:hover {
+    background-color: #15803d;
+}
+
+/* Clear button */
+.clear-btn {
+    background-color: gray;
+    color: white;
+}
+
+.clear-btn:hover {
+    background-color: darkgray;
+}
+
+/* Quick calculation buttons */
+.quick-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.quick-buttons button {
+    min-width: 100px;
+}
+
+/* Result display */
+#result {
+    color: #166534;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* Calculation history */
+#history {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Individual history entries */
+#history li {
+    background-color: #f1f5f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    color: #334155;
+    overflow-wrap: anywhere;
+}
+
+/* Clear history button */
+.clear-history-btn {
+    background-color: gray;
+    color: white;
+    margin-top: 10px;
+}
+
+.clear-history-btn:hover {
+    background-color: dimgray;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px 8px;
+    }
+
+    .calculator-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .keypad {
+        gap: 7px;
+    }
+
+    .keypad button {
+        min-height: 45px;
+        padding: 10px 5px;
+    }
+
+    .quick-buttons button {
+        min-width: 80px;
+    }
+}
